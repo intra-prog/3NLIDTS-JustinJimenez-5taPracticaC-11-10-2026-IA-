@@ -140,6 +140,16 @@ namespace _3NLIDTS_JustinJimenez_5taPracticaC_11_10_2026_IA_
             }
 
             MessageBox.Show(Mensaje, "Confirmación de Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+
+            // Obtener fecha y hora actual
+            string fechaRegistro = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+
+            string MensajeH = $"Fecha y Hora: {fechaRegistro}\n" +
+                             $"Nombre: {nombres}\nApellidos: {apellidos}\nTelefono: {tel}\n" +
+                             $"Edad: {edad}\nEstatura: {estatura}\nGenero: {genero}";
+
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

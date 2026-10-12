@@ -144,15 +144,21 @@ namespace _3NLIDTS_JustinJimenez_5taPracticaC_11_10_2026_IA_
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            tbApellidos.Clear();
-            tbNombre.Clear();
-            tbEdad.Clear();
-            tbEstatura.Clear();
-            tbTelefono.Clear();
-            tbTelefono.BackColor = System.Drawing.Color.White;
-            rbFemenino.Checked = false;
-            rbMasculino.Checked = false;
-            rbotro.Checked = false;
+            DialogResult confirmacion = MessageBox.Show("¿Está seguro de que desea limpiar todos los campos del formulario?", "Confirmar limpieza", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                tbApellidos.Clear();
+                tbNombre.Clear();
+                tbEdad.Clear();
+                tbEstatura.Clear();
+                tbTelefono.Clear();
+                tbTelefono.BackColor = System.Drawing.Color.White;
+                rbFemenino.Checked = false;
+                rbMasculino.Checked = false;
+                rbotro.Checked = false;
+                tbNombre.Focus();
+            }
         }
     }
 }
